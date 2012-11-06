@@ -1,13 +1,15 @@
 Fakebook::Application.routes.draw do
+  resources :posts
+
   get 'frontend/:template' => 'frontend#show'
 
   get 'frontend(/index)' => 'frontend#index'
 
-  get "frontend/index"
-
   root to: 'home#index'
 
-  get "home/index"
+  get 'hello_world' => 'hello_world#index'
+
+  get 'contato/teste/outroTeste' => 'contato#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

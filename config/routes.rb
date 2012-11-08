@@ -2,11 +2,11 @@ Fakebook::Application.routes.draw do
   resources :posts
 
   get 'frontend(/index)' => 'frontend#index'
-  
+
   get 'frontend/:template' => 'frontend#show'
 
 
-  root to: 'home#index'
+  root to: 'posts#index'
 
   get 'hello_world' => 'hello_world#index'
 

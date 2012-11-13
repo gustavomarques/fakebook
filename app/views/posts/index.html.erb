@@ -47,6 +47,12 @@
                     <p><%= image_tag(post.image.thumb, width: 100, height: 100) %></p>
                   <% end %>
 
+                  <% if post.image? %> 
+                    <%= link_to post.image.url do %>
+                      <%= image_tag(post.image.regular, width: 350, height: 225) %>
+                    <% end %>
+                  <% end %>
+
                   <%= simple_format(post.body) %>
                 </div>
                 <div class="item-actions">
